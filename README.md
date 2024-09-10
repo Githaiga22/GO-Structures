@@ -1,6 +1,31 @@
 # GO Structures
 
-### 1. Introduction to Go Structs
+## Table of Contents
+ - [Installation](#installation)
+- [Introduction](#introduction)
+- [Declaring a struct](#declaring-a-struct)
+- [Creating and Initializing a Struct](#creating-and-initializing-a-struct)
+- [Accessing Struct Fields](#accessing-struct-fields)
+- [Modifying Struct Fields](#modifying-struct-fields)
+- [Struct Methods](#struct-methods)
+- [Struct with Nested Structs](#struct-with-nested-structs)
+- [Structs with Functions as Fields](#structs-with-functions-as-fields)
+- [Pointers to Structs](#pointers-to-structs)
+- [Common Mistakes with Structs](#common-mistakes-with-structs)
+- [Practice Problems](#practice-problems)
+- [Conclusion](#conclusion)
+- [Author](#author)
+- [Github profile](#github-profile)
+
+
+## Installation
+To install the project, run:
+
+```bash
+git clone https://github.com/Githaiga22/GO-Structures.git
+```
+
+## Introduction
 
 - What is a Struct?
 
@@ -11,7 +36,7 @@
 
    - To organise and bundle related data together.
    - They allow you to model real-world things like a customer or product, each having multiple attributes (fields).
-### 2. Declaring a Struct
+## Declaring a Struct
 **Syntax:**
 ```bash
 type StructName struct {
@@ -31,7 +56,7 @@ Name string
 This example defines a Person struct with three fields: Name (string), Age (int), and Gender (string).
 
 
-### 3. Creating and Initializing a Struct
+## Creating and Initializing a Struct
 
 **Method 1: Using the Field Names**
    - You can create an instance of a struct by explicitly specifying the field names and values.
@@ -74,7 +99,7 @@ age: 23
 gender: male
 ```
 
-### 4. Accessing Struct Fields
+## Accessing Struct Fields
 
 Once a struct is created, you can access its fields using the dot (.) operator.
 
@@ -84,7 +109,7 @@ fmt.Println("Name:", person.name)
 fmt.Println("age:", person.age)
 fmt.Println("gender:", person.gender)
 ```
-### 5. Modifying Struct Fields
+## Modifying Struct Fields
 
    - You can also modify the fields of a struct after it has been created.
 
@@ -122,7 +147,7 @@ gender: male
 updated Age: 26
 }
 ```
-### 6. Struct Methods
+## Struct Methods
 
 Go allows you to define methods on structs, just like functions, but these methods are tied to a struct and can access its fields.
 
@@ -156,7 +181,7 @@ fmt.Println(person.Greet())
 Hello, my name is Allan kamau
 }
 ```
-### 7. Struct with Nested Structs
+## Struct with Nested Structs
 
 Sometimes, structs can contain other structs as fields, allowing for more complex data modeling.
 
@@ -192,7 +217,7 @@ fmt.Println(student.Name, "lives in", student.Address.city)
 //ouput
 fred gitonga lives in kisumu
 ```
-### 8. Structs with Functions as Fields
+## Structs with Functions as Fields
 
 You can even add functions to a struct as fields, allowing for flexible behaviors inside your structs.
 
@@ -222,7 +247,7 @@ fmt.Println("Sum:", result)
 //output
 Sum: 8
 ```
-### 9. Pointers to Structs
+## Pointers to Structs
 
 In Go, structs can be passed by value or by reference (using pointers). Passing by reference allows you to modify the original struct.
 
@@ -254,19 +279,19 @@ func main() {
 26
 ```
 
-### 10. Common Mistakes with Structs
+## Common Mistakes with Structs
 
 - Uninitialized Fields: If you don't initialize a field, Go automatically assigns a zero value (empty string, 0, false, etc.).
 - Using pointers when not needed: For small structs, passing by value may be more efficient.
    
 
-### 11. Practice Problems
+## Practice Problems
 
 - Easy: Create a Book struct with fields Title, Author, and Pages. Write a method to display the book's info.
 - Intermediate: Create a Library struct that holds multiple Book structs. Write methods to add a book and list all books in the library.
 - Hard: Create a Vehicle struct with fields like Make, Model, and Year. Then create a Fleet struct that manages multiple vehicles, including adding, removing, and searching vehicles by year.
 
-### 12. Conclusion
+## Conclusion
 
 Key Points to Remember:
   - Structs are used to group related data.
@@ -274,8 +299,8 @@ Key Points to Remember:
  - Pointers allow you to modify structs in place.
   - Structs can be nested or contain functions as fields.
 
-  ## Author
+## Author
   Allan Githaiga Kamau
 
-  ### Github profile
+## Github profile
   [Githaiga22](https://github.com/Githaiga22)
