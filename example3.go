@@ -6,6 +6,7 @@ type Person struct {
 	name string
 	age int
 	gender string
+	Address Address
 }
 type Address struct {
 	location string
@@ -22,9 +23,12 @@ func main() {
 			zipcode: 40100,
 		},
 
+		
+
 	}
 
 
-
+	fmt.Println(person.name, "lives in", person.Address.location) 
 }
+//Allan kamau lives in kisumu
 
