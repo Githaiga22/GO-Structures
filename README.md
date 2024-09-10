@@ -158,7 +158,9 @@ Hello, my name is Allan kamau
 
 Sometimes, structs can contain other structs as fields, allowing for more complex data modeling.
 
-    Example 3: A Student struct containing an Address struct
+**Example 3:**
+
+A Student struct containing an Address struct
 ```bash
 package main
 
@@ -188,7 +190,34 @@ fmt.Println(student.Name, "lives in", student.Address.city)
 //ouput
 fred gitonga lives in kisumu
 ```
+### 8. Structs with Functions as Fields
+
+You can even add functions to a struct as fields, allowing for flexible behaviors inside your structs.
+
+**Example 4:**
+
+ Calculator struct with function fields
+ ```bash
+ package main
+
+import "fmt"
 
 
+type Calculator struct {
+	Add func(a, b int)  int
+}
 
+func main() {
+	calculator  := Calculator{
+		Add: func(a, b int) int {
+			return a + b
+		},
+	}
+result := calculator.Add(3, 5)
+fmt.Println("Sum:", result)
+}
+
+//output
+Sum: 8
+```
 
