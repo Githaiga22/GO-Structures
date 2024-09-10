@@ -87,6 +87,8 @@ fmt.Println("gender:", person.gender)
 ### 5. Modifying Struct Fields
 
    - You can also modify the fields of a struct after it has been created.
+
+**Example 1:**
    ```bash
    package main
 
@@ -220,4 +222,60 @@ fmt.Println("Sum:", result)
 //output
 Sum: 8
 ```
+### 9. Pointers to Structs
 
+In Go, structs can be passed by value or by reference (using pointers). Passing by reference allows you to modify the original struct.
+
+**Example 5:** 
+
+Passing a Pointer to a Struct
+```bash
+package main 
+
+import "fmt"
+
+type Person struct {
+	Name string
+	Age int
+	gender string
+}
+
+func UpdateAge(p *Person, newAge int) {
+	p.Age = newAge
+}
+func main() {
+	john := Person{ Name: "john", Age: 25, gender: "Male"}
+	UpdateAge(&john, 26)
+	fmt.Println(john.Age) 
+
+}
+
+//output
+26
+```
+
+### 10. Common Mistakes with Structs
+
+- Uninitialized Fields: If you don't initialize a field, Go automatically assigns a zero value (empty string, 0, false, etc.).
+- Using pointers when not needed: For small structs, passing by value may be more efficient.
+   
+
+### 11. Practice Problems
+
+- Easy: Create a Book struct with fields Title, Author, and Pages. Write a method to display the book's info.
+- Intermediate: Create a Library struct that holds multiple Book structs. Write methods to add a book and list all books in the library.
+- Hard: Create a Vehicle struct with fields like Make, Model, and Year. Then create a Fleet struct that manages multiple vehicles, including adding, removing, and searching vehicles by year.
+
+### 12. Conclusion
+
+Key Points to Remember:
+  - Structs are used to group related data.
+  - Use methods to add functionality to structs.
+ - Pointers allow you to modify structs in place.
+  - Structs can be nested or contain functions as fields.
+
+  ## Author
+  Allan Githaiga Kamau
+
+  ### Github profile
+  [Githaiga22](https://github.com/Githaiga22)
