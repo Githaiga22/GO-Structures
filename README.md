@@ -154,11 +154,41 @@ fmt.Println(person.Greet())
 Hello, my name is Allan kamau
 }
 ```
-7. Struct with Nested Structs
+### 7. Struct with Nested Structs
 
 Sometimes, structs can contain other structs as fields, allowing for more complex data modeling.
 
-    Example 3: A Student struct containing an 
+    Example 3: A Student struct containing an Address struct
+```bash
+package main
+
+import "fmt"
+
+type Address struct {
+	city string
+	state string
+}
+type Student struct {
+	Name string
+	Age int
+	Address Address
+}
+func main() {
+	student := Student{
+		Name: "Fred Gitonga",
+		Age: 21,
+		Address: Address{
+			city: "Kisumu",
+			state: "Mamboleo",
+		},
+	}
+fmt.Println(student.Name, "lives in", student.Address.city)
+}
+
+//ouput
+fred gitonga lives in kisumu
+```
+
 
 
 
